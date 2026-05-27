@@ -54,7 +54,7 @@ export function ProjectCard({
     <div
       className={cn(
         "flex flex-col h-full border border-border rounded-xl overflow-hidden hover:ring-2 cursor-pointer hover:ring-muted transition-all duration-200",
-        className
+        className,
       )}
     >
       <div className="relative shrink-0">
@@ -117,9 +117,7 @@ export function ProjectCard({
             <ArrowUpRight className="h-4 w-4" aria-hidden />
           </a>
         </div>
-        <div className="text-xs flex-1 prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
-          <Markdown>{description}</Markdown>
-        </div>
+
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-auto">
             {tags.map((tag) => (

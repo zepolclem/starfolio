@@ -127,7 +127,7 @@ const sectionComponents: Record<string, React.ReactNode> = {
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
           <h2 className="text-xl font-bold">{DATA.sections.projects.heading}</h2>
         </BlurFade>
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-3 grid-cols-1 sm:grid-cols-2">
           {DATA.projects.map((project, index) => {
             const featured = "featured" in project && project.featured;
             const muted = "muted" in project && project.muted;
@@ -139,32 +139,29 @@ const sectionComponents: Record<string, React.ReactNode> = {
               >
                 <article
                   className={cn(
-                    "flex h-full flex-col gap-2 rounded-xl border bg-background p-4 transition",
+                    "flex h-full flex-col gap-2.5 rounded-xl border bg-background p-3 sm:p-4 transition",
                     featured
                       ? "border-primary/40 ring-2 ring-primary/30"
                       : "border-border ring-2 ring-border/20",
                     muted && "opacity-60 hover:opacity-100"
                   )}
                 >
-                  <div className="flex items-center justify-between gap-2">
-                    <span className="font-mono text-sm font-semibold truncate">
-                      {project.name}
-                    </span>
-                    <div className="flex items-center gap-2 flex-none">
-                      {featured && (
-                        <span className="rounded-md bg-primary/15 px-2 py-0.5 text-[10px] font-medium text-primary">
-                          Projet phare
-                        </span>
-                      )}
+                  <div className="flex items-start justify-between gap-2 flex-wrap">
+                    <div className="min-w-0 flex flex-col gap-0.5">
+                      <span className="font-mono text-sm font-semibold truncate">
+                        {project.name}
+                      </span>
+                      <span className="text-[10px] uppercase tracking-wider text-muted-foreground/70">
+                        {project.category}
+                      </span>
                     </div>
+                    {featured && (
+                      <span className="rounded-md bg-primary/15 px-2 py-0.5 text-[10px] font-medium text-primary flex-none">
+                        Projet phare
+                      </span>
+                    )}
                   </div>
-                  <div className="text-[11px] uppercase tracking-wider text-muted-foreground/70">
-                    {project.category}
-                  </div>
-                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 pt-2">
+                  <div className="flex flex-wrap gap-1.5">
                     {project.tech.map((t) => (
                       <span
                         key={t}
@@ -174,17 +171,17 @@ const sectionComponents: Record<string, React.ReactNode> = {
                       </span>
                     ))}
                   </div>
-                  <div className="mt-auto flex flex-wrap gap-2 pt-3">
+                  <div className="mt-auto flex flex-wrap gap-1.5 pt-1">
                     {project.links.map((link) => (
                       <a
                         key={link.url}
                         href={appendUtm(link.url)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-2.5 py-1 text-xs font-medium text-foreground transition hover:bg-muted/40"
+                        className="inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-2 py-1 text-xs font-medium text-foreground transition hover:bg-muted/40 min-w-0"
                       >
-                        <ExternalLink className="size-3" aria-hidden />
-                        {link.label}
+                        <ExternalLink className="size-3 flex-none" aria-hidden />
+                        <span className="truncate">{link.label}</span>
                       </a>
                     ))}
                   </div>
