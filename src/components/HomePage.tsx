@@ -7,7 +7,7 @@ import { DATA } from "@/data/resume";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
 import WorkSection from "@/components/section/work-section";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -104,6 +104,48 @@ const sectionComponents: Record<string, React.ReactNode> = {
                 {skill.icon && <skill.icon className="size-4 rounded overflow-hidden object-contain" />}
                 <span className="text-foreground text-sm font-medium">{skill.name}</span>
               </div>
+            </BlurFade>
+          ))}
+        </div>
+      </div>
+    </section>
+  ),
+  projects: (
+    <section id="projects">
+      <div className="flex min-h-0 flex-col gap-y-6">
+        <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <h2 className="text-xl font-bold">{DATA.sections.projects.heading}</h2>
+        </BlurFade>
+        <div className="grid gap-4 sm:grid-cols-2">
+          {DATA.projects.map((project, index) => (
+            <BlurFade key={project.name} delay={BLUR_FADE_DELAY * 12 + index * 0.05}>
+              <a
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex h-full flex-col gap-2 rounded-xl border border-border bg-background p-4 ring-2 ring-border/20 transition hover:ring-border/60"
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span className="font-mono text-sm font-semibold truncate">{project.name}</span>
+                  <ExternalLink
+                    className="size-3.5 text-muted-foreground opacity-60 group-hover:opacity-100 transition"
+                    aria-hidden
+                  />
+                </div>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="mt-auto flex flex-wrap gap-1.5 pt-2">
+                  {project.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="rounded-md border border-border bg-muted/40 px-2 py-0.5 text-[10px] font-medium text-muted-foreground"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </a>
             </BlurFade>
           ))}
         </div>

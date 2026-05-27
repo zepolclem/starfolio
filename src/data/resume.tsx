@@ -37,8 +37,9 @@ export const DATA = {
     },
     education: { order: 3, enabled: true, heading: "Formation" },
     skills: { order: 4, enabled: true, heading: "Compétences" },
+    projects: { order: 5, enabled: true, heading: "Projets" },
     contact: {
-      order: 5,
+      order: 6,
       enabled: true,
       label: "Contact",
       heading: "Me contacter",
@@ -194,6 +195,50 @@ export const DATA = {
       degree: "Baccalauréat Scientifique — spécialité Sciences Physiques",
       start: "2013",
       end: "2014",
+    },
+  ],
+  projects: [
+    {
+      name: "samatheo.fr",
+      href: "https://samatheo.fr",
+      description:
+        "Site vitrine d'un prestataire de sorties pêche et balades en bateau à Saint-Jean-de-Luz. Réservation, descriptifs des sorties (pêche sportive, coucher de soleil, observation des cétacés), bilingue FR/EN.",
+      tech: ["Astro", "Directus", "TypeScript"],
+    },
+    {
+      name: "cappecheloisirs.com",
+      href: "https://cappecheloisirs.com",
+      description:
+        "Site vitrine de Cap Pêche Loisirs : sorties pêche en mer et balades nature depuis Capbreton et Hossegor. Catalogue des prestations + tunnel de contact.",
+      tech: ["Astro", "Directus"],
+    },
+    {
+      name: "seixo-immobilier.fr",
+      href: "https://seixo-immobilier.fr",
+      description:
+        "Agence immobilière (Landes / Pays Basque) — annonces, estimations, contenu blog. Personnalisation du thème, formulaires de contact et fiches biens.",
+      tech: ["WordPress", "PHP"],
+    },
+    {
+      name: "izpoledance.fr",
+      href: "https://izpoledance.fr",
+      description:
+        "Studio de pole dance — cours, événements (EVJF), formations instructeurs. Site vitrine + plannings.",
+      tech: ["WordPress", "PHP"],
+    },
+    {
+      name: "prima-pizza-capbreton.fr",
+      href: "https://prima-pizza-capbreton.fr",
+      description:
+        "Pizzeria artisanale (Capbreton/Hossegor) — carte, prises de commande à emporter / livraison, intégration Google Maps.",
+      tech: ["Astro", "HTML", "CSS"],
+    },
+    {
+      name: "govroumvroum.fr",
+      href: "https://govroumvroum.fr",
+      description:
+        "Application web gratuite de suivi d'entretien voiture : carnet d'entretien numérique, centralisation des factures garage, rappels vidange et contrôle technique.",
+      tech: ["Astro", "TypeScript"],
     },
   ],
 } as const;
