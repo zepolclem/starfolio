@@ -1,23 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [
-        { "type": "header", "key": "host", "value": "clementlopez.fr" }
-      ],
-      "destination": "https://www.zepolclem.dev/:path*",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        { "type": "header", "key": "host", "value": "www.clementlopez.fr" }
-      ],
-      "destination": "https://www.zepolclem.dev/:path*",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
