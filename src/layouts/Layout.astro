@@ -136,6 +136,15 @@ const { baseFontSize } = CONFIG.typography;
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+
+    <!-- Analytics: OneDollarStats -->
+    <script
+      is:inline
+      defer
+      src="https://assets.onedollarstats.com/stonks.js"
+      data-hostname="zepolclem.dev"
+      data-devmode={import.meta.env.DEV ? "" : undefined}
+    ></script>
   </head>
   <body class="min-h-screen bg-background font-sans antialiased relative">
     <!-- FlickeringGrid header background - matches template exactly -->
