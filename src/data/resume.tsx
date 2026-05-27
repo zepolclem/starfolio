@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { House, Library } from "lucide-react";
+import { House } from "lucide-react";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
 import { Typescript } from "@/components/ui/svgs/typescript";
@@ -18,14 +18,14 @@ import { ApiPlatform } from "@/components/ui/svgs/apiPlatform";
 export const DATA = {
   name: "Clément Lopez",
   initials: "CL",
-  url: "https://clementlopez.dev",
+  url: "https://zepolclem.dev",
   location: "Bayonne, FR",
   locationLink: "https://www.google.com/maps/place/Bayonne",
   description:
     "Développeur web full-stack en formation IA. Back-end Symfony / API Platform, fronts Vue.js et React. E-commerce, outils internes et sites sur mesure.",
   summary:
     "Développeur web depuis 2015, basé au Pays Basque. Je conçois et maintiens des applications web full-stack — back-ends Symfony / API Platform, fronts Vue.js / React / Next.js, e-commerce PrestaShop. Plus de 8 ans d'expérience entre [agence, start-up](/#work) et [auto-entreprise](/#work). Actuellement [en formation Développeur IA chez Alyra](/#education).",
-  avatarUrl: "/picofme.jpg",
+  avatarUrl: "/photos/picofme.jpeg",
   ogImage: "/og_image.png",
   sections: {
     about: { order: 1, enabled: true, heading: "À propos" },
@@ -37,34 +37,14 @@ export const DATA = {
     },
     education: { order: 3, enabled: true, heading: "Formation" },
     skills: { order: 4, enabled: true, heading: "Compétences" },
-    projects: {
-      order: 5,
-      enabled: false,
-      label: "Projets",
-      heading: "Mes derniers projets",
-      text: "Sélection de projets récents.",
-    },
-    hackathons: {
-      order: 7,
-      enabled: false,
-      label: "Hackathons",
-      heading: "",
-      text: "",
-    },
-    photos: {
-      order: 6,
-      enabled: false,
-      heading: "",
-    },
     contact: {
-      order: 8,
+      order: 5,
       enabled: true,
       label: "Contact",
       heading: "Me contacter",
       text: "Une question, un projet ? Envoyez-moi un email ou un message sur LinkedIn — je réponds dès que possible.",
     },
   },
-  photos: [],
   skills: [
     { name: "PHP", icon: Php },
     { name: "Symfony", icon: Symfony },
@@ -81,10 +61,7 @@ export const DATA = {
     { name: "PostgreSQL", icon: Postgresql },
     { name: "Docker", icon: Docker },
   ],
-  navbar: [
-    { href: "/", icon: House, label: "Home" },
-    // { href: "/blog", icon: Library, label: "Blog" },
-  ],
+  navbar: [{ href: "/", icon: House, label: "Accueil" }],
   contact: {
     email: "lopez.clmnt@gmail.com",
     tel: "",
@@ -111,7 +88,6 @@ export const DATA = {
       badges: ["Auto-entrepreneur"],
       location: "France",
       title: "Développeur",
-      logoUrl: "https://avatar.vercel.sh/mcfly-info-concept?size=40",
       start: "Septembre 2017",
       end: undefined,
       description:
@@ -123,8 +99,6 @@ export const DATA = {
       badges: [],
       location: "Narrosse, Nouvelle-Aquitaine",
       title: "Lead Développeur",
-      logoUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPpZFzuEIzlUsHVBCHSLH4GfSiqr6a6azrwg&s",
       start: "Mars 2024",
       end: "Septembre 2025",
       description:
@@ -136,8 +110,6 @@ export const DATA = {
       badges: [],
       location: "Bayonne, Nouvelle-Aquitaine",
       title: "Lead Développeur web back-end",
-      logoUrl:
-        "https://static.wixstatic.com/media/2d656c_42b14362b8ae4567a267b65ff551ecfd~mv2.png/v1/fill/w_1024,h_1024,al_c/LOGO%20URBANEASE.png",
       start: "Juillet 2021",
       end: "Septembre 2023",
       description:
@@ -149,8 +121,6 @@ export const DATA = {
       badges: [],
       location: "Anglet, Nouvelle-Aquitaine",
       title: "Formateur Symfony",
-      logoUrl:
-        "https://www.google.com/s2/favicons?domain=wildcodeschool.com&sz=128",
       start: "Février 2021",
       end: "Mai 2021",
       description:
@@ -162,8 +132,6 @@ export const DATA = {
       badges: [],
       location: "Soorts-Hossegor, Aquitaine",
       title: "Développeur",
-      logoUrl:
-        "https://media.licdn.com/dms/image/v2/D4E0BAQF3gw174MrsNQ/company-logo_200_200/company-logo_200_200/0/1704468286083/cti_sant__logo?e=2147483647&v=beta&t=leoQZf63I-jmSEIilQNNRjl4-oOC8S4NuWwRxZeTpZU",
       start: "Octobre 2019",
       end: "Décembre 2020",
       description:
@@ -175,8 +143,6 @@ export const DATA = {
       badges: [],
       location: "Bordeaux, Aquitaine",
       title: "Développeur web",
-      logoUrl:
-        "https://kndesign.fr/wp-content/uploads/2014/11/logo-kndesign.png",
       start: "Février 2017",
       end: "Mars 2017",
       description:
@@ -188,8 +154,6 @@ export const DATA = {
       badges: [],
       location: "Soorts, Nouvelle-Aquitaine",
       title: "Développeur",
-      logoUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYJIpzO_qHIrI7XfTFLguQilrIxlxHPMnAtw&s",
       start: "Mai 2016",
       end: "Juin 2016",
       description:
@@ -201,7 +165,6 @@ export const DATA = {
       school: "Alyra",
       href: "https://alyra.fr",
       degree: "Formation Développeur IA (en cours)",
-      logoUrl: "https://www.google.com/s2/favicons?domain=alyra.fr&sz=128",
       start: "2026",
       end: "Présent",
     },
@@ -209,8 +172,6 @@ export const DATA = {
       school: "Wild Code School",
       href: "https://www.wildcodeschool.com",
       degree: "Développeur PHP / Symfony 4",
-      logoUrl:
-        "https://www.google.com/s2/favicons?domain=wildcodeschool.com&sz=128",
       start: "2019",
       end: "2019",
     },
@@ -218,7 +179,6 @@ export const DATA = {
       school: "Lycée Gustave Eiffel",
       href: "",
       degree: "BTS Services Informatiques aux Organisations",
-      logoUrl: "https://avatar.vercel.sh/lycee-gustave-eiffel?size=40",
       start: "2015",
       end: "2017",
     },
@@ -226,11 +186,8 @@ export const DATA = {
       school: "Lycée St Joseph Hasparren",
       href: "",
       degree: "Baccalauréat Scientifique — spécialité Sciences Physiques",
-      logoUrl: "https://avatar.vercel.sh/st-joseph-hasparren?size=40",
       start: "2013",
       end: "2014",
     },
   ],
-  projects: [],
-  hackathons: [],
 } as const;
