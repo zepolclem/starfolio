@@ -7,6 +7,13 @@ import { Nodejs } from "@/components/ui/svgs/nodejs";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
 import { Astro } from "@/components/ui/svgs/astro";
+import { Symfony } from "@/components/ui/svgs/symfony";
+import { Vuejs } from "@/components/ui/svgs/vuejs";
+import { Php } from "@/components/ui/svgs/php";
+import { Wordpress } from "@/components/ui/svgs/wordpress";
+import { Prestashop } from "@/components/ui/svgs/prestashop";
+import { Cakephp } from "@/components/ui/svgs/cakephp";
+import { ApiPlatform } from "@/components/ui/svgs/apiPlatform";
 
 export const DATA = {
   name: "Clément Lopez",
@@ -18,7 +25,7 @@ export const DATA = {
     "Développeur web full-stack en formation IA. Back-end Symfony / API Platform, fronts Vue.js et React. E-commerce, outils internes et sites sur mesure.",
   summary:
     "Développeur web depuis 2015, basé au Pays Basque. Je conçois et maintiens des applications web full-stack — back-ends Symfony / API Platform, fronts Vue.js / React / Next.js, e-commerce PrestaShop. Plus de 8 ans d'expérience entre [agence, start-up](/#work) et [auto-entreprise](/#work). Actuellement [en formation Développeur IA chez Alyra](/#education).",
-  avatarUrl: "/picofme.png",
+  avatarUrl: "/picofme.jpg",
   ogImage: "/og_image.png",
   sections: {
     about: { order: 1, enabled: true, heading: "À propos" },
@@ -59,24 +66,24 @@ export const DATA = {
   },
   photos: [],
   skills: [
-    { name: "PHP", icon: undefined },
-    { name: "Symfony", icon: undefined },
-    { name: "API Platform", icon: undefined },
-    { name: "Vue.js", icon: undefined },
+    { name: "PHP", icon: Php },
+    { name: "Symfony", icon: Symfony },
+    { name: "API Platform", icon: ApiPlatform },
+    { name: "Vue.js", icon: Vuejs },
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
     { name: "TypeScript", icon: Typescript },
     { name: "Node.js", icon: Nodejs },
     { name: "Astro", icon: Astro },
-    { name: "PrestaShop", icon: undefined },
-    { name: "WordPress", icon: undefined },
-    { name: "CakePHP", icon: undefined },
+    { name: "PrestaShop", icon: Prestashop },
+    { name: "WordPress", icon: Wordpress },
+    { name: "CakePHP", icon: Cakephp },
     { name: "PostgreSQL", icon: Postgresql },
     { name: "Docker", icon: Docker },
   ],
   navbar: [
     { href: "/", icon: House, label: "Home" },
-    { href: "/blog", icon: Library, label: "Blog" },
+    // { href: "/blog", icon: Library, label: "Blog" },
   ],
   contact: {
     email: "lopez.clmnt@gmail.com",
@@ -116,7 +123,8 @@ export const DATA = {
       badges: [],
       location: "Narrosse, Nouvelle-Aquitaine",
       title: "Lead Développeur",
-      logoUrl: "https://avatar.vercel.sh/actuelburo?size=40",
+      logoUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPpZFzuEIzlUsHVBCHSLH4GfSiqr6a6azrwg&s",
       start: "Mars 2024",
       end: "Septembre 2025",
       description:
@@ -128,7 +136,8 @@ export const DATA = {
       badges: [],
       location: "Bayonne, Nouvelle-Aquitaine",
       title: "Lead Développeur web back-end",
-      logoUrl: "https://avatar.vercel.sh/urbanease?size=40",
+      logoUrl:
+        "https://static.wixstatic.com/media/2d656c_42b14362b8ae4567a267b65ff551ecfd~mv2.png/v1/fill/w_1024,h_1024,al_c/LOGO%20URBANEASE.png",
       start: "Juillet 2021",
       end: "Septembre 2023",
       description:
@@ -140,7 +149,8 @@ export const DATA = {
       badges: [],
       location: "Anglet, Nouvelle-Aquitaine",
       title: "Formateur Symfony",
-      logoUrl: "https://www.google.com/s2/favicons?domain=wildcodeschool.com&sz=128",
+      logoUrl:
+        "https://www.google.com/s2/favicons?domain=wildcodeschool.com&sz=128",
       start: "Février 2021",
       end: "Mai 2021",
       description:
@@ -148,11 +158,12 @@ export const DATA = {
     },
     {
       company: "CTI Santé",
-      href: "",
+      href: "https://www.ctisante.com",
       badges: [],
       location: "Soorts-Hossegor, Aquitaine",
       title: "Développeur",
-      logoUrl: "https://avatar.vercel.sh/cti-sante?size=40",
+      logoUrl:
+        "https://media.licdn.com/dms/image/v2/D4E0BAQF3gw174MrsNQ/company-logo_200_200/company-logo_200_200/0/1704468286083/cti_sant__logo?e=2147483647&v=beta&t=leoQZf63I-jmSEIilQNNRjl4-oOC8S4NuWwRxZeTpZU",
       start: "Octobre 2019",
       end: "Décembre 2020",
       description:
@@ -164,7 +175,8 @@ export const DATA = {
       badges: [],
       location: "Bordeaux, Aquitaine",
       title: "Développeur web",
-      logoUrl: "https://avatar.vercel.sh/kn-design?size=40",
+      logoUrl:
+        "https://kndesign.fr/wp-content/uploads/2014/11/logo-kndesign.png",
       start: "Février 2017",
       end: "Mars 2017",
       description:
@@ -176,7 +188,8 @@ export const DATA = {
       badges: [],
       location: "Soorts, Nouvelle-Aquitaine",
       title: "Développeur",
-      logoUrl: "https://avatar.vercel.sh/hackschooling?size=40",
+      logoUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYJIpzO_qHIrI7XfTFLguQilrIxlxHPMnAtw&s",
       start: "Mai 2016",
       end: "Juin 2016",
       description:
@@ -196,7 +209,8 @@ export const DATA = {
       school: "Wild Code School",
       href: "https://www.wildcodeschool.com",
       degree: "Développeur PHP / Symfony 4",
-      logoUrl: "https://www.google.com/s2/favicons?domain=wildcodeschool.com&sz=128",
+      logoUrl:
+        "https://www.google.com/s2/favicons?domain=wildcodeschool.com&sz=128",
       start: "2019",
       end: "2019",
     },
