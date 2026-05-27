@@ -68,6 +68,9 @@ importers:
       next-themes:
         specifier: ^0.4.6
         version: 0.4.6(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
+      onedollarstats:
+        specifier: ^0.0.23
+        version: 0.0.23(react@19.2.5)
       react:
         specifier: ^19.2.5
         version: 19.2.5
@@ -2044,6 +2047,20 @@ packages:
 
   ohash@2.0.11:
     resolution: {integrity: sha512-RdR9FQrFwNBNXAr4GixM8YaRZRJ5PUWbKYbE5eOsrwAjJW0q2REGcf79oYPsLyskQCZG1PLN+S/K1V00joZAoQ==}
+
+  onedollarstats@0.0.23:
+    resolution: {integrity: sha512-wn8hy4wDJjeC9+1lVcKyLQ69iWmyIKx55t4IehaaJhDW/P1lbAXV25CDsICgAGbtljyszNpAf9hzr09af8Waxw==}
+    peerDependencies:
+      expo-router: '>=3.0.0'
+      react: '>=18.0.0'
+      react-native: '>=0.73.0'
+    peerDependenciesMeta:
+      expo-router:
+        optional: true
+      react:
+        optional: true
+      react-native:
+        optional: true
 
   oniguruma-parser@0.12.2:
     resolution: {integrity: sha512-6HVa5oIrgMC6aA6WF6XyyqbhRPJrKR02L20+2+zpDtO5QAzGHAUGw5TKQvwi5vctNnRHkJYmjAhRVQF2EKdTQw==}
@@ -4802,6 +4819,10 @@ snapshots:
       ufo: 1.6.4
 
   ohash@2.0.11: {}
+
+  onedollarstats@0.0.23(react@19.2.5):
+    optionalDependencies:
+      react: 19.2.5
 
   oniguruma-parser@0.12.2: {}
 
