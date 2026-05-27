@@ -66,6 +66,12 @@ export const DATA = {
     email: "lopez.clmnt@gmail.com",
     tel: "",
     social: {
+      GitHub: {
+        name: "GitHub",
+        url: "https://github.com/zepolclem",
+        icon: Icons.github,
+        navbar: true,
+      },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/lopezclmnt",
