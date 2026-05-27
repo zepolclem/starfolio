@@ -208,22 +208,15 @@ export const DATA = {
       featured: true,
     },
     {
-      name: "samatheo.fr",
-      links: [{ label: "Site", url: "https://samatheo.fr" }],
+      name: "samatheo.fr · cappecheloisirs.com",
+      links: [
+        { label: "samatheo.fr", url: "https://samatheo.fr" },
+        { label: "cappecheloisirs.com", url: "https://cappecheloisirs.com" },
+      ],
       description:
-        "Site vitrine d'un prestataire de sorties pêche et balades en bateau à Saint-Jean-de-Luz. Réservation, descriptifs des sorties (pêche sportive, coucher de soleil, observation des cétacés), bilingue FR/EN.",
+        "Deux sites vitrines jumelés pour prestataires de sorties pêche et balades en bateau (Saint-Jean-de-Luz et Capbreton/Hossegor). Catalogue des sorties, tunnel de contact, back-office Directus partagé, bilingue FR/EN sur samatheo.",
       tech: ["Astro", "Directus", "TypeScript"],
       category: "Website",
-      group: "sorties-en-mer",
-    },
-    {
-      name: "cappecheloisirs.com",
-      links: [{ label: "Site", url: "https://cappecheloisirs.com" }],
-      description:
-        "Site vitrine de Cap Pêche Loisirs : sorties pêche en mer et balades nature depuis Capbreton et Hossegor. Catalogue des prestations + tunnel de contact.",
-      tech: ["Astro", "Directus"],
-      category: "Website",
-      group: "sorties-en-mer",
     },
     {
       name: "seixo-immobilier.fr",

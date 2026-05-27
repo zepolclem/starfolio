@@ -131,7 +131,6 @@ const sectionComponents: Record<string, React.ReactNode> = {
           {DATA.projects.map((project, index) => {
             const featured = "featured" in project && project.featured;
             const muted = "muted" in project && project.muted;
-            const group = "group" in project ? project.group : undefined;
             return (
               <BlurFade
                 key={project.name}
@@ -155,11 +154,6 @@ const sectionComponents: Record<string, React.ReactNode> = {
                       {featured && (
                         <span className="rounded-md bg-primary/15 px-2 py-0.5 text-[10px] font-medium text-primary">
                           Projet phare
-                        </span>
-                      )}
-                      {group && (
-                        <span className="rounded-md border border-border bg-muted/40 px-2 py-0.5 text-[10px] font-medium text-muted-foreground">
-                          Série
                         </span>
                       )}
                     </div>
