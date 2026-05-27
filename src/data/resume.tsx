@@ -200,7 +200,7 @@ export const DATA = {
   projects: [
     {
       name: "govroumvroum.fr",
-      href: "https://govroumvroum.fr",
+      links: [{ label: "Site", url: "https://govroumvroum.fr" }],
       description:
         "Application web gratuite de suivi d'entretien voiture : carnet d'entretien numérique, centralisation des factures garage, rappels vidange et contrôle technique.",
       tech: ["Astro", "TypeScript"],
@@ -209,7 +209,7 @@ export const DATA = {
     },
     {
       name: "samatheo.fr",
-      href: "https://samatheo.fr",
+      links: [{ label: "Site", url: "https://samatheo.fr" }],
       description:
         "Site vitrine d'un prestataire de sorties pêche et balades en bateau à Saint-Jean-de-Luz. Réservation, descriptifs des sorties (pêche sportive, coucher de soleil, observation des cétacés), bilingue FR/EN.",
       tech: ["Astro", "Directus", "TypeScript"],
@@ -218,7 +218,7 @@ export const DATA = {
     },
     {
       name: "cappecheloisirs.com",
-      href: "https://cappecheloisirs.com",
+      links: [{ label: "Site", url: "https://cappecheloisirs.com" }],
       description:
         "Site vitrine de Cap Pêche Loisirs : sorties pêche en mer et balades nature depuis Capbreton et Hossegor. Catalogue des prestations + tunnel de contact.",
       tech: ["Astro", "Directus"],
@@ -227,7 +227,7 @@ export const DATA = {
     },
     {
       name: "seixo-immobilier.fr",
-      href: "https://seixo-immobilier.fr",
+      links: [{ label: "Site", url: "https://seixo-immobilier.fr" }],
       description:
         "Agence immobilière (Landes / Pays Basque) — annonces, estimations, contenu blog. Personnalisation du thème, formulaires de contact et fiches biens.",
       tech: ["WordPress", "PHP"],
@@ -235,7 +235,7 @@ export const DATA = {
     },
     {
       name: "prima-pizza-capbreton.fr",
-      href: "https://prima-pizza-capbreton.fr",
+      links: [{ label: "Site", url: "https://prima-pizza-capbreton.fr" }],
       description:
         "Pizzeria artisanale (Capbreton/Hossegor) — carte, prises de commande à emporter / livraison, intégration Google Maps.",
       tech: ["Astro", "HTML", "CSS"],
@@ -243,7 +243,7 @@ export const DATA = {
     },
     {
       name: "izpoledance.fr",
-      href: "https://izpoledance.fr",
+      links: [{ label: "Site", url: "https://izpoledance.fr" }],
       description:
         "Studio de pole dance — cours, événements (EVJF), formations instructeurs. Site vitrine + plannings.",
       tech: ["WordPress", "PHP"],
