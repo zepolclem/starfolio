@@ -3,3 +3,6 @@ packages:
 allowBuilds:
   esbuild: true
   sharp: true
+peerDependencyRules:
+  allowedVersions:
+    tsconfck>typescript: '6'
