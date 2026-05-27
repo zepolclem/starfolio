@@ -204,7 +204,7 @@ export const DATA = {
       description:
         "Application web gratuite de suivi d'entretien voiture : carnet d'entretien numérique, centralisation des factures garage, rappels vidange et contrôle technique.",
       tech: ["Astro", "TypeScript"],
-      category: "Application web",
+      category: "Website",
       featured: true,
     },
     {
@@ -213,7 +213,7 @@ export const DATA = {
       description:
         "Site vitrine d'un prestataire de sorties pêche et balades en bateau à Saint-Jean-de-Luz. Réservation, descriptifs des sorties (pêche sportive, coucher de soleil, observation des cétacés), bilingue FR/EN.",
       tech: ["Astro", "Directus", "TypeScript"],
-      category: "Site vitrine",
+      category: "Website",
       group: "sorties-en-mer",
     },
     {
@@ -222,7 +222,7 @@ export const DATA = {
       description:
         "Site vitrine de Cap Pêche Loisirs : sorties pêche en mer et balades nature depuis Capbreton et Hossegor. Catalogue des prestations + tunnel de contact.",
       tech: ["Astro", "Directus"],
-      category: "Site vitrine",
+      category: "Website",
       group: "sorties-en-mer",
     },
     {
@@ -231,7 +231,7 @@ export const DATA = {
       description:
         "Agence immobilière (Landes / Pays Basque) — annonces, estimations, contenu blog. Personnalisation du thème, formulaires de contact et fiches biens.",
       tech: ["WordPress", "PHP"],
-      category: "Site vitrine",
+      category: "Website",
     },
     {
       name: "prima-pizza-capbreton.fr",
@@ -239,7 +239,7 @@ export const DATA = {
       description:
         "Pizzeria artisanale (Capbreton/Hossegor) — carte, prises de commande à emporter / livraison, intégration Google Maps.",
       tech: ["Astro", "HTML", "CSS"],
-      category: "Site vitrine",
+      category: "Website",
     },
     {
       name: "izpoledance.fr",
@@ -247,7 +247,7 @@ export const DATA = {
       description:
         "Studio de pole dance — cours, événements (EVJF), formations instructeurs. Site vitrine + plannings.",
       tech: ["WordPress", "PHP"],
-      category: "Site vitrine",
+      category: "Website",
       muted: true,
     },
   ],
