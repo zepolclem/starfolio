@@ -8,8 +8,19 @@ import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
 import WorkSection from "@/components/section/work-section";
 import { ArrowUpRight, ExternalLink } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const BLUR_FADE_DELAY = 0.04;
+
+function appendUtm(url: string): string {
+  try {
+    const u = new URL(url);
+    u.searchParams.set("utm_source", "zepolclem.dev");
+    return u.toString();
+  } catch {
+    return url;
+  }
+}
 
 const sectionComponents: Record<string, React.ReactNode> = {
   about: (
@@ -117,37 +128,70 @@ const sectionComponents: Record<string, React.ReactNode> = {
           <h2 className="text-xl font-bold">{DATA.sections.projects.heading}</h2>
         </BlurFade>
         <div className="grid gap-4 sm:grid-cols-2">
-          {DATA.projects.map((project, index) => (
-            <BlurFade key={project.name} delay={BLUR_FADE_DELAY * 12 + index * 0.05}>
-              <a
-                href={project.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex h-full flex-col gap-2 rounded-xl border border-border bg-background p-4 ring-2 ring-border/20 transition hover:ring-border/60"
+          {DATA.projects.map((project, index) => {
+            const featured = "featured" in project && project.featured;
+            const muted = "muted" in project && project.muted;
+            const group = "group" in project ? project.group : undefined;
+            const href = appendUtm(project.href);
+            return (
+              <BlurFade
+                key={project.name}
+                delay={BLUR_FADE_DELAY * 12 + index * 0.05}
+                className={cn(featured && "sm:col-span-2")}
               >
-                <div className="flex items-center justify-between gap-2">
-                  <span className="font-mono text-sm font-semibold truncate">{project.name}</span>
-                  <ExternalLink
-                    className="size-3.5 text-muted-foreground opacity-60 group-hover:opacity-100 transition"
-                    aria-hidden
-                  />
-                </div>
-                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="mt-auto flex flex-wrap gap-1.5 pt-2">
-                  {project.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="rounded-md border border-border bg-muted/40 px-2 py-0.5 text-[10px] font-medium text-muted-foreground"
-                    >
-                      {t}
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    "group flex h-full flex-col gap-2 rounded-xl border bg-background p-4 transition",
+                    featured
+                      ? "border-primary/40 ring-2 ring-primary/30 hover:ring-primary/60"
+                      : "border-border ring-2 ring-border/20 hover:ring-border/60",
+                    muted && "opacity-60 hover:opacity-100"
+                  )}
+                >
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="font-mono text-sm font-semibold truncate">
+                      {project.name}
                     </span>
-                  ))}
-                </div>
-              </a>
-            </BlurFade>
-          ))}
+                    <div className="flex items-center gap-2 flex-none">
+                      {featured && (
+                        <span className="rounded-md bg-primary/15 px-2 py-0.5 text-[10px] font-medium text-primary">
+                          Projet phare
+                        </span>
+                      )}
+                      {group && (
+                        <span className="rounded-md border border-border bg-muted/40 px-2 py-0.5 text-[10px] font-medium text-muted-foreground">
+                          Série
+                        </span>
+                      )}
+                      <ExternalLink
+                        className="size-3.5 text-muted-foreground opacity-60 group-hover:opacity-100 transition"
+                        aria-hidden
+                      />
+                    </div>
+                  </div>
+                  <div className="text-[11px] uppercase tracking-wider text-muted-foreground/70">
+                    {project.category}
+                  </div>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                    {project.description}
+                  </p>
+                  <div className="mt-auto flex flex-wrap gap-1.5 pt-2">
+                    {project.tech.map((t) => (
+                      <span
+                        key={t}
+                        className="rounded-md border border-border bg-muted/40 px-2 py-0.5 text-[10px] font-medium text-muted-foreground"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </a>
+              </BlurFade>
+            );
+          })}
         </div>
       </div>
     </section>

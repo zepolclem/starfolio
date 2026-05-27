@@ -199,11 +199,22 @@ export const DATA = {
   ],
   projects: [
     {
+      name: "govroumvroum.fr",
+      href: "https://govroumvroum.fr",
+      description:
+        "Application web gratuite de suivi d'entretien voiture : carnet d'entretien numérique, centralisation des factures garage, rappels vidange et contrôle technique.",
+      tech: ["Astro", "TypeScript"],
+      category: "Application web",
+      featured: true,
+    },
+    {
       name: "samatheo.fr",
       href: "https://samatheo.fr",
       description:
         "Site vitrine d'un prestataire de sorties pêche et balades en bateau à Saint-Jean-de-Luz. Réservation, descriptifs des sorties (pêche sportive, coucher de soleil, observation des cétacés), bilingue FR/EN.",
       tech: ["Astro", "Directus", "TypeScript"],
+      category: "Site vitrine",
+      group: "sorties-en-mer",
     },
     {
       name: "cappecheloisirs.com",
@@ -211,6 +222,8 @@ export const DATA = {
       description:
         "Site vitrine de Cap Pêche Loisirs : sorties pêche en mer et balades nature depuis Capbreton et Hossegor. Catalogue des prestations + tunnel de contact.",
       tech: ["Astro", "Directus"],
+      category: "Site vitrine",
+      group: "sorties-en-mer",
     },
     {
       name: "seixo-immobilier.fr",
@@ -218,13 +231,7 @@ export const DATA = {
       description:
         "Agence immobilière (Landes / Pays Basque) — annonces, estimations, contenu blog. Personnalisation du thème, formulaires de contact et fiches biens.",
       tech: ["WordPress", "PHP"],
-    },
-    {
-      name: "izpoledance.fr",
-      href: "https://izpoledance.fr",
-      description:
-        "Studio de pole dance — cours, événements (EVJF), formations instructeurs. Site vitrine + plannings.",
-      tech: ["WordPress", "PHP"],
+      category: "Site vitrine",
     },
     {
       name: "prima-pizza-capbreton.fr",
@@ -232,13 +239,16 @@ export const DATA = {
       description:
         "Pizzeria artisanale (Capbreton/Hossegor) — carte, prises de commande à emporter / livraison, intégration Google Maps.",
       tech: ["Astro", "HTML", "CSS"],
+      category: "Site vitrine",
     },
     {
-      name: "govroumvroum.fr",
-      href: "https://govroumvroum.fr",
+      name: "izpoledance.fr",
+      href: "https://izpoledance.fr",
       description:
-        "Application web gratuite de suivi d'entretien voiture : carnet d'entretien numérique, centralisation des factures garage, rappels vidange et contrôle technique.",
-      tech: ["Astro", "TypeScript"],
+        "Studio de pole dance — cours, événements (EVJF), formations instructeurs. Site vitrine + plannings.",
+      tech: ["WordPress", "PHP"],
+      category: "Site vitrine",
+      muted: true,
     },
   ],
 } as const;
