@@ -12,10 +12,12 @@ import { cn } from "@/lib/utils";
 
 const BLUR_FADE_DELAY = 0.04;
 
+const UTM_SOURCE = new URL(DATA.url).hostname;
+
 function appendUtm(url: string): string {
   try {
     const u = new URL(url);
-    u.searchParams.set("utm_source", "zepolclem.dev");
+    u.searchParams.set("utm_source", UTM_SOURCE);
     return u.toString();
   } catch {
     return url;

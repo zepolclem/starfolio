@@ -3,8 +3,20 @@
   "redirects": [
     {
       "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.clementlopez.fr" }],
+      "destination": "https://clementlopez.fr/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "zepolclem.dev" }],
-      "destination": "https://www.zepolclem.dev/$1",
+      "destination": "https://clementlopez.fr/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.zepolclem.dev" }],
+      "destination": "https://clementlopez.fr/$1",
       "permanent": true
     }
   ],

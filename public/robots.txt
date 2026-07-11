@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.zepolclem.dev/sitemap-index.xml
+Sitemap: https://clementlopez.fr/sitemap-index.xml

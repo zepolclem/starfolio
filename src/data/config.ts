@@ -3,7 +3,7 @@ export const CONFIG = {
   // Site Settings
   // ---------------------------------------------------------------------------
   site: {
-    url: "https://www.zepolclem.dev",
+    url: "https://clementlopez.fr",
     locale: "fr_FR",
     twitterHandle: "",
   },
