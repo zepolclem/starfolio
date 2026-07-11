@@ -30,6 +30,58 @@ const ogImage = image
 
 const { light, dark, radius } = CONFIG.theme;
 const { baseFontSize } = CONFIG.typography;
+
+const sameAs = Object.values(DATA.contact.social)
+  .map((s) => s.url)
+  .filter((url) => !url.startsWith("mailto:"));
+
+const areaServed = [
+  "Saint-Vincent-de-Tyrosse",
+  "Capbreton",
+  "Hossegor",
+  "Seignosse",
+  "Soustons",
+  "Labenne",
+  "Dax",
+  "Landes",
+  "Bayonne",
+  "Anglet",
+  "Biarritz",
+  "Pays Basque",
+].map((name) => ({ "@type": "Place", name }));
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${CONFIG.site.url}/#person`,
+      name: DATA.name,
+      url: CONFIG.site.url,
+      image: `${CONFIG.site.url}${DATA.avatarUrl}`,
+      jobTitle: "Développeur web full-stack freelance",
+      email: DATA.contact.email,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Saint-Vincent-de-Tyrosse",
+        addressRegion: "Nouvelle-Aquitaine",
+        addressCountry: "FR",
+      },
+      sameAs,
+      knowsAbout: DATA.skills.map((s) => s.name),
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${CONFIG.site.url}/#service`,
+      name: DATA.name,
+      description: DATA.description,
+      url: CONFIG.site.url,
+      founder: { "@id": `${CONFIG.site.url}/#person` },
+      areaServed,
+      knowsLanguage: ["fr"],
+    },
+  ],
+};
 ---
 
 <html
@@ -137,11 +189,14 @@ const { baseFontSize } = CONFIG.typography;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
+    <!-- Structured data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
     <!-- Analytics: OneDollarStats -->
     <script>
       import { configure } from "onedollarstats";
       configure({
-        hostname: "zepolclem.dev",
+        hostname: "www.zepolclem.dev",
         devmode: import.meta.env.DEV,
       });
     </script>
