@@ -148,6 +148,23 @@ const sectionComponents: Record<string, React.ReactNode> = {
                     muted && "opacity-60 hover:opacity-100"
                   )}
                 >
+                  {"image" in project && project.image && (
+                    <a
+                      href={appendUtm(project.links[0].url)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="-mx-3 -mt-3 sm:-mx-4 sm:-mt-4 mb-1 block overflow-hidden rounded-t-xl"
+                    >
+                      <img
+                        src={project.image}
+                        alt={`Capture du site ${project.name}`}
+                        width={800}
+                        height={420}
+                        loading="lazy"
+                        className="aspect-[1.9/1] w-full object-cover object-top transition-transform duration-300 hover:scale-[1.02]"
+                      />
+                    </a>
+                  )}
                   <div className="flex items-start justify-between gap-2 flex-wrap">
                     <div className="min-w-0 flex flex-col gap-0.5">
                       <span className="font-mono text-sm font-semibold truncate">

@@ -200,6 +200,7 @@ export const DATA = {
   projects: [
     {
       name: "govroumvroum.fr",
+      image: "/projects/govroumvroum.webp",
       links: [{ label: "Site", url: "https://govroumvroum.fr" }],
       description:
         "Application web gratuite de suivi d'entretien voiture : carnet d'entretien numérique, centralisation des factures garage, rappels vidange et contrôle technique.",
@@ -209,6 +210,7 @@ export const DATA = {
     },
     {
       name: "samatheo.fr · cappecheloisirs.com",
+      image: "/projects/samatheo.webp",
       links: [
         { label: "samatheo.fr", url: "https://samatheo.fr" },
         { label: "cappecheloisirs.com", url: "https://cappecheloisirs.com" },
@@ -220,6 +222,7 @@ export const DATA = {
     },
     {
       name: "seixo-immobilier.fr",
+      image: "/projects/seixo.webp",
       links: [{ label: "Site", url: "https://seixo-immobilier.fr" }],
       description:
         "Agence immobilière (Landes / Pays Basque) — annonces, estimations, contenu blog. Personnalisation du thème, formulaires de contact et fiches biens.",
@@ -228,6 +231,7 @@ export const DATA = {
     },
     {
       name: "prima-pizza-capbreton.fr",
+      image: "/projects/prima-pizza.webp",
       links: [{ label: "Site", url: "https://prima-pizza-capbreton.fr" }],
       description:
         "Pizzeria artisanale (Capbreton/Hossegor) — carte, prises de commande à emporter / livraison, intégration Google Maps.",
@@ -236,6 +240,7 @@ export const DATA = {
     },
     {
       name: "izpoledance.fr",
+      image: "/projects/izpole.webp",
       links: [{ label: "Site", url: "https://izpoledance.fr" }],
       description:
         "Studio de pole dance — cours, événements (EVJF), formations instructeurs. Site vitrine + plannings.",
