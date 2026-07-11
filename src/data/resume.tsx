@@ -209,14 +209,20 @@ export const DATA = {
       featured: true,
     },
     {
-      name: "samatheo.fr · cappecheloisirs.com",
+      name: "samatheo.fr",
       image: "/projects/samatheo.webp",
-      links: [
-        { label: "samatheo.fr", url: "https://samatheo.fr" },
-        { label: "cappecheloisirs.com", url: "https://cappecheloisirs.com" },
-      ],
+      links: [{ label: "Site", url: "https://samatheo.fr" }],
       description:
-        "Deux sites vitrines jumelés pour prestataires de sorties pêche et balades en bateau (Saint-Jean-de-Luz et Capbreton/Hossegor). Catalogue des sorties, tunnel de contact, back-office Directus partagé, bilingue FR/EN sur samatheo.",
+        "Site vitrine pour un prestataire de sorties pêche en mer et balades en bateau (Saint-Jean-de-Luz). Catalogue des sorties, tunnel de contact, back-office Directus, bilingue FR/EN.",
+      tech: ["Astro", "Directus", "TypeScript"],
+      category: "Website",
+    },
+    {
+      name: "cappecheloisirs.com",
+      image: "/projects/cappecheloisirs.webp",
+      links: [{ label: "Site", url: "https://cappecheloisirs.com" }],
+      description:
+        "Site vitrine pour un prestataire de sorties pêche en mer et balades en bateau (Capbreton/Hossegor). Catalogue des sorties, tunnel de contact, back-office Directus.",
       tech: ["Astro", "Directus", "TypeScript"],
       category: "Website",
     },
