@@ -29,15 +29,15 @@ export const DATA = {
   ogImage: "/og_image.png",
   sections: {
     about: { order: 1, enabled: true, heading: "À propos" },
+    projects: { order: 2, enabled: true, heading: "Projets" },
     work: {
-      order: 2,
+      order: 3,
       enabled: true,
       heading: "Expérience",
       presentLabel: "Aujourd'hui",
     },
-    education: { order: 3, enabled: true, heading: "Formation" },
-    skills: { order: 4, enabled: true, heading: "Compétences" },
-    projects: { order: 5, enabled: true, heading: "Projets" },
+    education: { order: 4, enabled: true, heading: "Formation" },
+    skills: { order: 5, enabled: true, heading: "Compétences" },
     contact: {
       order: 6,
       enabled: true,
