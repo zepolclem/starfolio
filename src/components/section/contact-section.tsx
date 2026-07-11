@@ -1,4 +1,5 @@
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
+import { Mail, Phone } from "lucide-react";
 import { DATA } from "@/data/resume";
 
 export default function ContactSection() {
@@ -25,6 +26,22 @@ export default function ContactSection() {
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
           {DATA.sections.contact.text}
         </p>
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <a
+            href={`tel:${DATA.contact.tel}`}
+            className="inline-flex items-center gap-2 rounded-xl border border-border bg-background px-4 py-2 text-sm font-medium transition hover:bg-muted/40"
+          >
+            <Phone className="size-4" aria-hidden />
+            {DATA.contact.telDisplay}
+          </a>
+          <a
+            href={DATA.contact.social.email.url}
+            className="inline-flex items-center gap-2 rounded-xl border border-border bg-background px-4 py-2 text-sm font-medium transition hover:bg-muted/40"
+          >
+            <Mail className="size-4" aria-hidden />
+            Email
+          </a>
+        </div>
       </div>
     </div>
   );

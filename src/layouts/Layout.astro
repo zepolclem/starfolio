@@ -61,6 +61,7 @@ const jsonLd = {
       image: `${CONFIG.site.url}${DATA.avatarUrl}`,
       jobTitle: "Développeur web full-stack freelance",
       email: DATA.contact.email,
+      telephone: DATA.contact.tel,
       address: {
         "@type": "PostalAddress",
         addressLocality: "Saint-Vincent-de-Tyrosse",
@@ -76,6 +77,8 @@ const jsonLd = {
       name: DATA.name,
       description: DATA.description,
       url: CONFIG.site.url,
+      telephone: DATA.contact.tel,
+      email: DATA.contact.email,
       founder: { "@id": `${CONFIG.site.url}/#person` },
       areaServed,
       knowsLanguage: ["fr"],

@@ -65,7 +65,8 @@ export const DATA = {
   navbar: [{ href: "/", icon: House, label: "Accueil" }],
   contact: {
     email: "lopez.clmnt@gmail.com",
-    tel: "",
+    tel: "+33743731375",
+    telDisplay: "07 43 73 13 75",
     social: {
       GitHub: {
         name: "GitHub",
