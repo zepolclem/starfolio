@@ -64,7 +64,7 @@ export const DATA = {
   ],
   navbar: [{ href: "/", icon: House, label: "Accueil" }],
   contact: {
-    email: "lopez.clmnt@gmail.com",
+    email: "contact@clementlopez.fr",
     tel: "+33743731375",
     telDisplay: "07 43 73 13 75",
     social: {
@@ -82,7 +82,7 @@ export const DATA = {
       },
       email: {
         name: "Email",
-        url: "mailto:lopez.clmnt@gmail.com",
+        url: "mailto:contact@clementlopez.fr",
         icon: Icons.email,
         navbar: true,
       },
