@@ -22,7 +22,7 @@ export const DATA = {
   location: "Saint-Vincent-de-Tyrosse, FR",
   locationLink: "https://www.google.com/maps/place/Saint-Vincent-de-Tyrosse",
   description:
-    "Développeur web full-stack freelance dans le Sud des Landes (Saint-Vincent-de-Tyrosse). Back-end Symfony / API Platform, fronts Vue.js et React. E-commerce, outils internes et sites sur mesure.",
+    "Développeur web full-stack freelance dans les Landes, entre Dax et Bayonne (Saint-Vincent-de-Tyrosse). Back-end Symfony / API Platform, fronts Vue.js et React. E-commerce, outils internes et sites sur mesure.",
   summary:
     "Développeur web depuis 2015, basé dans le Sud des Landes, entre Hossegor et le Pays Basque. Je conçois et maintiens des applications web full-stack — back-ends Symfony / API Platform, fronts Vue.js / React / Next.js, e-commerce PrestaShop. Plus de 8 ans d'expérience entre [agence, start-up](/#work) et [auto-entreprise](/#work). Actuellement [en formation Développeur IA chez Alyra](/#education).",
   avatarUrl: "/photos/picofme.jpeg",
