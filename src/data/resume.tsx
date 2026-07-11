@@ -18,7 +18,7 @@ import { ApiPlatform } from "@/components/ui/svgs/apiPlatform";
 export const DATA = {
   name: "Clément Lopez",
   initials: "CL",
-  url: "https://clementlopez.fr",
+  url: "https://www.clementlopez.fr",
   location: "Saint-Vincent-de-Tyrosse, FR",
   locationLink: "https://www.google.com/maps/place/Saint-Vincent-de-Tyrosse",
   description:
