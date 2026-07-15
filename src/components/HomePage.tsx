@@ -7,22 +7,9 @@ import { DATA } from "@/data/resume";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
 import WorkSection from "@/components/section/work-section";
-import { ArrowUpRight, ExternalLink } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
-
-const UTM_SOURCE = new URL(DATA.url).hostname;
-
-function appendUtm(url: string): string {
-  try {
-    const u = new URL(url);
-    u.searchParams.set("utm_source", UTM_SOURCE);
-    return u.toString();
-  } catch {
-    return url;
-  }
-}
 
 const sectionComponents: Record<string, React.ReactNode> = {
   about: (
@@ -123,95 +110,6 @@ const sectionComponents: Record<string, React.ReactNode> = {
       </div>
     </section>
   ),
-  projects: (
-    <section id="projects">
-      <div className="flex min-h-0 flex-col gap-y-6">
-        <BlurFade delay={BLUR_FADE_DELAY * 11}>
-          <h2 className="text-xl font-bold">{DATA.sections.projects.heading}</h2>
-        </BlurFade>
-        <div className="grid gap-3 grid-cols-1 sm:grid-cols-2">
-          {DATA.projects.map((project, index) => {
-            const featured = "featured" in project && project.featured;
-            const muted = "muted" in project && project.muted;
-            return (
-              <BlurFade
-                key={project.name}
-                delay={BLUR_FADE_DELAY * 12 + index * 0.05}
-                className={cn(featured && "sm:col-span-2")}
-              >
-                <article
-                  className={cn(
-                    "flex h-full flex-col gap-2.5 rounded-xl border bg-background p-3 sm:p-4 transition",
-                    featured
-                      ? "border-primary/40 ring-2 ring-primary/30"
-                      : "border-border ring-2 ring-border/20",
-                    muted && "opacity-60 hover:opacity-100"
-                  )}
-                >
-                  {"image" in project && project.image && (
-                    <a
-                      href={appendUtm(project.links[0].url)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="-mx-3 -mt-3 sm:-mx-4 sm:-mt-4 mb-1 block overflow-hidden rounded-t-xl"
-                    >
-                      <img
-                        src={project.image}
-                        alt={`Capture du site ${project.name}`}
-                        width={800}
-                        height={420}
-                        loading="lazy"
-                        className="aspect-[1.9/1] w-full object-cover object-top transition-transform duration-300 hover:scale-[1.02]"
-                      />
-                    </a>
-                  )}
-                  <div className="flex items-start justify-between gap-2 flex-wrap">
-                    <div className="min-w-0 flex flex-col gap-0.5">
-                      <span className="font-mono text-sm font-semibold truncate">
-                        {project.name}
-                      </span>
-                      <span className="text-[10px] uppercase tracking-wider text-muted-foreground/70">
-                        {project.category}
-                      </span>
-                    </div>
-                    {featured && (
-                      <span className="rounded-md bg-primary/15 px-2 py-0.5 text-[10px] font-medium text-primary flex-none">
-                        Projet phare
-                      </span>
-                    )}
-                  </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.tech.map((t) => (
-                      <span
-                        key={t}
-                        className="rounded-md border border-border bg-muted/40 px-2 py-0.5 text-[10px] font-medium text-muted-foreground"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="mt-auto flex flex-wrap gap-1.5 pt-1">
-                    {project.links.map((link) => (
-                      <a
-                        key={link.url}
-                        href={appendUtm(link.url)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 rounded-md border border-border bg-background px-2 py-1 text-xs font-medium text-foreground transition hover:bg-muted/40 min-w-0"
-                      >
-                        <ExternalLink className="size-3 flex-none" aria-hidden />
-                        <span className="truncate">{link.label}</span>
-                      </a>
-                    ))}
-                  </div>
-                </article>
-              </BlurFade>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  ),
   contact: (
     <section id="contact">
       <BlurFade delay={BLUR_FADE_DELAY * 16}>
@@ -244,6 +142,15 @@ export default function HomePage() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
+              <BlurFade delay={BLUR_FADE_DELAY * 2}>
+                <a
+                  href="/creation-site-web"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground transition hover:text-foreground"
+                >
+                  Vous avez un projet de site web ? Voir mes offres
+                  <ArrowRight className="size-4" aria-hidden />
+                </a>
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
               <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">

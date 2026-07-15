@@ -1,0 +1,78 @@
+---
+export const prerender = true;
+import Layout from "@/layouts/Layout.astro";
+import { DATA } from "@/data/resume";
+
+const { legal, contact, name } = DATA;
+const lastUpdated = "Juillet 2026";
+---
+
+<Layout
+  title="Mentions légales"
+  description={`Mentions légales du site ${name} — éditeur, hébergeur et informations légales.`}
+>
+  <main class="min-h-dvh">
+    <div class="prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
+      <h1 class="text-3xl font-semibold tracking-tighter text-foreground sm:text-4xl">
+        Mentions légales
+      </h1>
+
+      <h2 class="text-xl font-bold text-foreground">Éditeur du site</h2>
+      <p>
+        Le présent site est édité par&nbsp;:<br />
+        <strong>{legal.editor}</strong><br />
+        {legal.status}<br />
+        {legal.address}<br />
+        Email&nbsp;: <a href={`mailto:${contact.email}`}>{contact.email}</a><br />
+        Téléphone&nbsp;: <a href={`tel:${contact.tel}`}>{contact.telDisplay}</a>
+      </p>
+      <p>
+        SIREN&nbsp;: {legal.siren}<br />
+        SIRET&nbsp;: {legal.siret}<br />
+        {legal.registration}<br />
+        {legal.vat}
+      </p>
+
+      <h2 class="text-xl font-bold text-foreground">Directeur de la publication</h2>
+      <p>{legal.publicationDirector}</p>
+
+      <h2 class="text-xl font-bold text-foreground">Hébergeur</h2>
+      <p>
+        <strong>{legal.host.name}</strong><br />
+        {legal.host.address}<br />
+        <a href={legal.host.url} target="_blank" rel="noopener noreferrer">
+          {legal.host.url}
+        </a>
+      </p>
+
+      <h2 class="text-xl font-bold text-foreground">Propriété intellectuelle</h2>
+      <p>
+        L'ensemble des contenus (textes, visuels, code) présents sur ce site est,
+        sauf mention contraire, la propriété de {legal.editor}. Toute
+        reproduction, représentation ou diffusion, totale ou partielle, sans
+        autorisation préalable est interdite.
+      </p>
+
+      <h2 class="text-xl font-bold text-foreground">Données personnelles</h2>
+      <p>
+        Aucun formulaire de collecte de données n'est présent sur ce site&nbsp;: la
+        prise de contact se fait directement par email ou téléphone. Les
+        échanges qui en découlent ne sont utilisés que pour répondre à votre
+        demande et ne sont jamais cédés à des tiers.
+      </p>
+      <p>
+        Conformément au RGPD et à la loi « Informatique et Libertés », vous
+        disposez d'un droit d'accès, de rectification et de suppression des
+        données vous concernant. Pour l'exercer, écrivez à{" "}
+        <a href={`mailto:${contact.email}`}>{contact.email}</a>.
+      </p>
+
+      <h2 class="text-xl font-bold text-foreground">Mesure d'audience</h2>
+      <p>{legal.analytics}</p>
+
+      <p class="text-sm text-muted-foreground/70">
+        Dernière mise à jour&nbsp;: {lastUpdated}.
+      </p>
+    </div>
+  </main>
+</Layout>

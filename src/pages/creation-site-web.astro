@@ -1,0 +1,12 @@
+---
+export const prerender = true;
+import Layout from "../layouts/Layout.astro";
+import CreationSiteWeb from "@/components/CreationSiteWeb";
+---
+
+<Layout
+  title="Création de site web sur mesure — Landes & Pays Basque"
+  description="Création de sites web sur mesure, rapides et optimisés pour le référencement, dans le Sud des Landes et le Pays Basque. Pas de thème WordPress générique : du sur mesure simple et efficace, adapté à votre besoin réel. Devis gratuit."
+>
+  <CreationSiteWeb client:load />
+</Layout>

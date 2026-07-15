@@ -222,6 +222,18 @@ const jsonLd = {
     <!-- Main content wrapper - matches template's z-10 container exactly -->
     <div class="relative z-10 max-w-2xl mx-auto py-12 pb-24 sm:py-24 px-6">
       <slot />
+
+      <footer
+        class="mt-16 flex flex-col items-center gap-2 border-t border-border pt-6 text-sm text-muted-foreground sm:flex-row sm:justify-between"
+      >
+        <span>© {new Date().getFullYear()} {DATA.name}</span>
+        <a
+          href="/mentions-legales"
+          class="transition-colors hover:text-foreground"
+        >
+          Mentions légales
+        </a>
+      </footer>
     </div>
 
     <!-- Navbar: ThemeProvider + TooltipProvider + Navbar all in one React island -->

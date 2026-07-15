@@ -29,7 +29,6 @@ export const DATA = {
   ogImage: "/og_image.png",
   sections: {
     about: { order: 1, enabled: true, heading: "À propos" },
-    projects: { order: 2, enabled: true, heading: "Projets" },
     work: {
       order: 3,
       enabled: true,
@@ -63,6 +62,23 @@ export const DATA = {
     { name: "Docker", icon: Docker },
   ],
   navbar: [{ href: "/", icon: House, label: "Accueil" }],
+  legal: {
+    editor: "Clément Lopez",
+    status: "Entrepreneur individuel (micro-entreprise)",
+    address: "90 route de Laricq, 40230 Saubrigues, France",
+    siren: "832 939 607",
+    siret: "832 939 607 00012",
+    registration: "Immatriculé au Registre National des Entreprises (RNE)",
+    vat: "TVA non applicable, art. 293 B du CGI",
+    publicationDirector: "Clément Lopez",
+    host: {
+      name: "Vercel Inc.",
+      address: "340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis",
+      url: "https://vercel.com",
+    },
+    analytics:
+      "Ce site utilise OneDollarStats, un outil de mesure d'audience respectueux de la vie privée, sans cookie et sans collecte de données personnelles identifiantes.",
+  },
   contact: {
     email: "contact@clementlopez.fr",
     tel: "+33743731375",
@@ -200,16 +216,6 @@ export const DATA = {
   ],
   projects: [
     {
-      name: "govroumvroum.fr",
-      image: "/projects/govroumvroum.webp",
-      links: [{ label: "Site", url: "https://govroumvroum.fr" }],
-      description:
-        "Application web gratuite de suivi d'entretien voiture : carnet d'entretien numérique, centralisation des factures garage, rappels vidange et contrôle technique.",
-      tech: ["Astro", "TypeScript"],
-      category: "Website",
-      featured: true,
-    },
-    {
       name: "samatheo.fr",
       image: "/projects/samatheo.webp",
       links: [{ label: "Site", url: "https://samatheo.fr" }],
@@ -243,6 +249,15 @@ export const DATA = {
       description:
         "Pizzeria artisanale (Capbreton/Hossegor) — carte, prises de commande à emporter / livraison, intégration Google Maps.",
       tech: ["Astro", "HTML", "CSS"],
+      category: "Website",
+    },
+    {
+      name: "pizza-rezzo-capbreton.fr",
+      image: "/projects/pizza-rezzo.webp",
+      links: [{ label: "Site", url: "https://www.pizza-rezzo-capbreton.fr" }],
+      description:
+        "Pizzeria artisanale à emporter (Capbreton, depuis 1982) — carte des pizzas maison, cuisine thaï saisonnière, vins & boissons, infos horaires et contact.",
+      tech: ["Astro", "TypeScript"],
       category: "Website",
     },
     {
